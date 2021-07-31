@@ -9,15 +9,20 @@
     color: #333;
     margin: 0;
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+}
+
+.container {
     margin: 20px;
 }
 
 .textbox {
     width: 750px;
-    max-width: 95%;
+    max-width: 100%;
     max-height: 75vh;
     height: 450px;
     margin: 0px;
