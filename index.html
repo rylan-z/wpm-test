@@ -2,34 +2,33 @@
 <html lang="en" data-theme="dark">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>Reading Speed Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="http://fonts.cdnfonts.com/css/univers" rel="stylesheet">
+    <title>Reading Speed Test</title>
 </head>
 
 <body>
-  <script src=jquery-2.1.1.min.js></script>
+    <script src=jquery-2.1.1.min.js></script>
 
-  <p>Type in the textbox</p>
+    Enter what you'd like to read here
+    <br><br>
 
-  <textarea class="textbox" id="word" rows="10"></textarea>
-  <br><br>
 
-  Word Count: <span id="wordcount">0</span>
-  <br><br>
+    <textarea class="textbox" id="word" rows="10"></textarea>
+    <br><br> Word Count: <span id="wordcount">0</span>
+    <br><br>
 
-  <button class="btn" onclick="wordCount()">Count</button>
-  <button class="btn" id="start">Start</button>
-  <button class="btn" id="stop">Stop</button>
-  <br><br>
+    <button class="btn" onclick="wordCount()">Count</button>
+    <button class="btn" id="start">Start</button>
+    <button class="btn" id="stop">Stop</button>
+    <br><br> Speed: <span id="speed"></span><br> Time: <span id="timeValue"></span><br>
 
-  Speed: <span id="speed"></span><br>
-  Time: <span id="timeValue"></span><br>
-  Seconds: <span id="timeValue"></span><br>
-
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
