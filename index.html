@@ -19,11 +19,10 @@
     <br><br>
 
 
-    <textarea class="textbox" id="word" rows="10"></textarea>
+    <textarea class="textbox" oninput="wordCount()" id="word" rows="10"></textarea>
     <br><br> Word Count: <span id="wordcount">0</span>
     <br><br>
 
-    <button class="btn" onclick="wordCount()">Count</button>
     <button class="btn" id="start">Start</button>
     <button class="btn" id="stop">Stop</button>
     <br><br> Speed: <span id="speed"></span><br> Time: <span id="timeValue"></span><br>
