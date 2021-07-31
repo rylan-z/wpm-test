@@ -8,15 +8,16 @@ jQuery('#stop').click(function(){
     alert('you did not start yet!');
     return;
   }
+  
   //Stop the clock
   watch.stop();
   // create wpm and difference here:
-  var wpm = Math.round(wordCount('#wordcount') / (watch.getSeconds() / 60));
+  var wpm = Math.round(wordCount('#page1') / (watch.getSeconds() / 60));
   var difference = Math.round(100*((wpm/250)-1));
   // refer to watch's methods, and use text()
   jQuery('#timeValue').text(watch.getSeconds());
   // Make sure to replace the previous result, and give some clarity in the output
-  jQuery('#wordValue').text(Math.round(wordCount('#wordcount')));
+  jQuery('#wordValue').text(Math.round(wordCount('#page1')));
   jQuery('#speed').text(wpm);
   jQuery('#difference').text(difference + '%');
 });
@@ -59,7 +60,30 @@ function Stopwatch(){
   }   
 }
 
+// create separate function that has little to do with the stopwatch:
 function wordCount(text){
-  testWords = parseInt(text, 10);
-  return testWords;
+  //count words
+  var words = document
+    .getElementById("word").value;
+
+  // Initialize the word counter
+  var count = 0;
+
+  // Split the words on each
+  // space character 
+  var split = words.split(' ');
+
+  // Loop through the words and 
+  // increase the counter when 
+  // each split word is not empty
+  for (var i = 0; i < split.length; i++) {
+    if (split[i] != "") {
+      count += 1;
+    }
+  }
+  // Display it as output
+  document.getElementById("wordcount")
+    .innerHTML = count;
+  console.log(count)
+  return count;
 }

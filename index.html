@@ -1,67 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Word Counter</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Reading Speed Test</title>
 </head>
-<body>
-    <script src=jquery-3.6.0.min.js></script>
 
+<body>
+  <script src=jquery-2.1.1.min.js></script>
+
+  <p>Type in the textbox</p>
+
+  <textarea class="textbox" id="word" rows="10"></textarea>
+  <br><br>
+
+  Word Count: <span id="wordcount">0</span>
+  <br><br>
+
+  <button class="btn" onclick="wordCount()">Count</button>
+  <button class="btn" id="start">Start</button>
+  <button class="btn" id="stop">Stop</button>
+  <br><br>
+
+  Speed: <span id="speed"></span><br>
+  Time: <span id="timeValue"></span><br>
+  Seconds: <span id="timeValue"></span><br>
 
   <script src="main.js"></script>
-  
-  <p>
-    Type in the textbox to
-    automatically count the words
-</p>
-
-
-<textarea id="word" oninput="countWord()"
-    rows="10" cols="60">
-</textarea>
-<br><br>
-
-<p> Word Count:
-    <span id="wordcount">0</span>
-</p>
-
-<button class="btn" id="start" >Start Reading</button>
-<button class="btn" id="stop" >Finished!</button><br>
-Words: <span id="wordValue"></span><br>
-Speed: <span id="speed"></span><br>
-Difference: <span id="difference"></span><br>
-Seconds: <span id="timeValue"></span><br>
-
-<script>
-  function countWord() {
-
-      // Get the input text value
-      var words = document
-          .getElementById("word").value;
-
-      // Initialize the word counter
-      var count = 0;
-
-      // Split the words on each
-      // space character 
-      var split = words.split(' ');
-
-      // Loop through the words and 
-      // increase the counter when 
-      // each split word is not empty
-      for (var i = 0; i < split.length; i++) {
-          if (split[i] != "") {
-              count += 1;
-          }
-      }
-
-      // Display it as output
-      document.getElementById("wordcount")
-          .innerHTML = count;
-  }
-</script>
 
 </body>
+
 </html>
